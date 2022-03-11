@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Ubuntu+Mono&display=swap');
+@import url('http://fonts.cdnfonts.com/css/do-futuristic');
+
+body {
+
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(/img/outer-digital-space-tq.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --main-font: 'Inconsolata', monospace;
+    --title-font: 'DO Futuristic', sans-serif;
+    --main-text-color: white;
+}
+
+#planetInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'name name name name '
+        'latin-name latin-name latin-name latin-name'
+        'desc desc desc desc'
+        'tempday tempday tempnight tempnight'
+        'circumference circumference distance distance'
+        'moon moon moon moon';
+    
+    margin: 2rem auto;
+    padding: 4.5rem;
+    background-color: rgba(97, 77, 116, 0.39);
+    width: 800px;
+    height: 550px;
+    border-radius: 1rem;
+    line-height: 1.3rem;
+    font-family: var(--main-font);
+    color: #ffffff;
+
+}
+
+#name {
+    font-family: var(--title-font);
+    font-size: 4rem;
+    color: #a15212;
+    grid-area: name;
+}
+
+#latin-name {
+    font-family: var(--title-font);
+    font-size: 1.6rem;
+    margin-top: -.5rem;
+    grid-area: latin-name;
+    color: #e845ee;
+
+}
+
+#desc {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    grid-area: desc;
+
+}
+
+#tempday {
+    font-size: 1.2rem;
+    margin-left: 6rem;
+    grid-area: tempday;
+}
+
+#tempnight {
+    font-size: 1.2rem;
+    grid-area: tempnight;
+}
+
+#circumference {
+    font-size: 1.2rem;
+    margin-left: 6rem;
+    grid-area: circumference;
+}
+
+#distance {
+    font-size: 1.2rem;
+    margin-right: 3rem;
+    grid-area: distance;
+}
+
+#moon {
+    word-break: break-all;
+    font-size: .885rem;
+    margin: -1rem 2rem 0 0;
+    grid-area: moon;
+}
+
+#desc::after {
+    content: "";
+    margin-top: 1rem;
+    display: block;
+    width: 800px;
+    height: 2px;
+    background: #a1521275;
+   
+}
+
+#moon::before {
+    content: "";
+    margin-bottom: 1.2rem;
+    display: block;
+    width: 800px;
+    height: 2px;
+    background: #a1521275;
+    right: 14.5rem;
+   
+}
+
+#home{
+    margin: 1rem 0 0 .5rem;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(195, 111, 235);
+    border: none;
+    border-radius: 1rem;
+    font-family: var(--main-font);
+    font-weight: 600;
+    cursor: pointer;
+}
+#home:hover{
+    background-color: white;
+}
+#astronaut{
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    width: 120px;
+    animation: float 8s infinite;
+}
+@keyframes float {
+    
+
+0% {
+    transform: translatey(0px);
+}
+50% {
+    transform: translatey(-50px);
+}
+100% {
+    transform: translatey(0px);
+}
+}
+#pagination{
+    display: flex;
+}
+
+#previousPage,
+#nextPage {
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 1rem;
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgb(195, 111, 235);
+    cursor: pointer;
+    transform: translate(212px, -90px);
+
+
+}
+#previousPage:hover,
+#nextPage:hover,
+#previousPage:focus,
+#nextPage:focus {
+    background-color: white;
+}
+
+#peeking-yoda{
+    width: 110px;
+    margin: -.33rem -2.1rem;
+    cursor: pointer;
+
+}
+#peeking-yoda:hover{
+    margin-left: -1rem;
+}

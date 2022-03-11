@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Ubuntu+Mono&display=swap');
+@import url('http://fonts.cdnfonts.com/css/do-futuristic');
+
+body {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(/img/astronaut-chilling-in-space-4k-ny.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -5rem;
+}
+
+h1 {
+    margin: 1.8rem 2rem;
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #1e054b;
+    text-shadow: 1px 0px 1px #CCCCCC,
+        0px 1px 1px #EEEEEE,
+        2px 1px 1px #e6e6e6,
+        1px 2px 1px #EEEEEE,
+        3px 2px 1px #CCCCCC,
+        2px 3px 1px #EEEEEE,
+        2px 3px 1px #CCCCCC,
+        2px 4px 1px #EEEEEE,
+        2px 4px 1px #CCCCCC,
+        2px 5px 1px #EEEEEE,
+        2px 5px 1px #CCCCCC,
+        2px 6px 1px #EEEEEE,
+        2px 6px 1px #CCCCCC;
+}
+
+h2 {
+    text-align: center;
+    margin-left: -3.5rem;
+    padding: 2rem;
+    font-size: 2rem;
+    color: rgb(71, 71, 199);
+    cursor: pointer;
+    font-family: var(--main-font);
+    width: 200px;
+    height: 50px;
+    background-color: rgba(189, 189, 189, 0.479);
+    background-image: url(/img/snow.gif);
+    border-radius: 2rem;
+
+}
+
+h2:hover,
+h4:hover {
+    transition: all 2s;
+    transform: translateY(-20px);
+    text-shadow: 0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #e60073,
+        0 0 40px #e60073,
+        0 0 50px #e60073,
+        0 0 60px #e60073,
+        0 0 70px #e60073;
+}
+
+h3 {
+
+    margin: 8rem auto;
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: rgb(150, 0, 112);
+
+}
+
+h4 {
+    margin-top: -.8rem;
+    font-size: 3rem;
+    color: #4f096b;
+    cursor: pointer;
+}
+
+h3,
+h4,
+#planet-list {
+    text-shadow: 0 0 4px #fff,
+        0 0 1px #fff,
+        0 0 10px rgb(204, 146, 19),
+        0 0 0px rgb(241, 187, 71),
+        0 0 10px rgb(23, 23, 23),
+        0 0 10px rgb(241, 187, 71),
+        0 0 10px rgb(241, 187, 71)
+}
+
+h5 {
+    margin-top: -2rem;
+    font-size: 1.5rem;
+    color: #9e0cd8;
+}
+
+img {
+    width: 66px;
+    cursor: pointer;
+    animation: spin 2s alternate infinite;
+
+}
+
+div {
+    text-align: center;
+    margin-top: -6rem;
+    visibility: hidden;
+}
+
+#planetImg img:hover,
+#planetImg img:focus,
+#search:hover,
+#search:focus {
+    box-shadow: -1px -1px 28px 14px rgba(245, 175, 84, 1);
+}
+
+
+:root {
+    --main-font: 'Inconsolata', monospace;
+    --title-font: 'DO Futuristic', sans-serif;
+    --main-text-color: white;
+}
+
+#inputs {
+    position: absolute;
+    top: 10rem;
+    left: 29%;
+
+}
+
+#search {
+    background-color: rgba(255, 255, 255, 0.719);
+    border: none;
+    border-radius: 2rem;
+    padding: .3rem 2rem;
+    font-family: var(--main-font);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgb(43, 31, 3);
+    text-align: center;
+    width: 450px;
+    height: 55px;
+    outline: none;
+
+}
+
+#planet-list {
+    margin: -4rem 0 0 30rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    width: 850px;
+    height: 280px;
+    visibility: hidden;
+    transition: 500ms ease-in-out;
+    animation: slide 1s forwards;
+}
+
+#planetImg {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: -12rem;
+}
+
+img {
+    border-radius: 100%;
+    animation: Rotation 10s linear infinite;
+}
+
+@keyframes Rotation {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+#saturn {
+    width: 110px;
+    animation: none !important;
+
+}
+
+/* @keyframes saturn {
+    from {
+        -webkit-transform: rotate(0);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+} */
+
+
+#info {
+    display: none;
+    text-align: center;
+    padding: 2.5rem;
+    position: absolute;
+    top: 15%;
+    left: -100%;
+    background-color: rgba(128, 62, 0, 0.87);
+    width: 700px;
+    height: 400px;
+    color: white;
+    font-family: var(--main-font);
+    border-radius: 10rem;
+    z-index: 3;
+    transition: 500ms ease-in-out;
+    animation: slide 1s forwards;
+}
+
+@keyframes slide {
+    100% {
+        left: 18%;
+    }
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(148, 141, 141, 0.5);
+    z-index: 1;
+}
+
+#close {
+    cursor: pointer;
+    margin: -6rem 0 0 35rem;
+    font-size: 3rem;
+    color: rgb(7, 7, 7);
+
+}
+
+#close:hover {
+    color: red;
+}
+
+#home {
+    display: none;
+    margin: -26rem 0 0 .5rem;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(195, 111, 235);
+    border: none;
+    border-radius: 1rem;
+    font-family: var(--main-font);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#previousPage,
+#nextPage {
+    width: 110px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 1rem;
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 3rem;
+    color: rgb(195, 111, 235);
+    cursor: pointer;
+    display: none;
+    margin-top: 25rem;
+
+}
+
+#home:hover,
+#previousPage:hover,
+#nextPage:hover,
+#previousPage:focus,
+#nextPage:focus {
+    background-color: white;
+}
+
+#astro {
+    margin-top: -10rem;
+    visibility: hidden;
+    animation-duration: 15s;
+    animation-name: fly;
+    width: 8rem;
+    cursor: auto;
+}
+
+
+@keyframes fly {
+
+    0% {
+        margin-left: -10%;
+        transform: translatey(-20px);
+    }
+
+    35% {
+        transform: translatey(20px);
+    }
+
+    65% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        margin-left: 100%;
+
+        transform: translatey(20px);
+    }
+
+
+}
+
+.hat {
+    animation: none !important;
+    width: 190px;
+    margin: -8rem 0 0 -41.5rem;
+}
+
+
